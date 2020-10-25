@@ -23,7 +23,7 @@ body {
 .navbar-item {
     display: inline-block;
     margin-top: 20px;
-    margin-left: 50px;
+    margin-left: 150px;
     padding: 10px;
 }
 
@@ -41,37 +41,26 @@ hr {
 }
 
 .main-content {
-    margin: 20px;
-    width: 75%;
-    padding: 2% 0;
-}
-
-.m-cont-text-1 {
-    display: flex;
-    justify-content: left;
-    font-size: 2.5em;
-}
-
-.m-cont-text-2 {
-    display: flex;
-    justify-content: center;
     font-size: 2em;
-    position: relative;
-    right: 85px;
+    padding: 20px;
 }
 
-.m-cont-text-3 {
-    display: flex;
-    justify-content: right;
-    font-size: 2.5em;
+.main-content table {
+    margin: auto;
+    width: 1000px;
 }
 
-.m-cont-text-4 {
-    display: flex;
-    justify-content: center;
-    font-size: 2.5em;
-    margin-top: 150px;
+.quiz-data-entry {
+    text-align: center;
+    color: #fff;
+    opacity: 0.5;
 }
+
+.quiz-data-entry a {
+    color: inherit;
+    text-decoration: underline;
+}
+
 
 .copyright-text-container {
     margin-top: 3.5%;
