@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login: QQs</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/0e8fd8ca0a.js" crossorigin="anonymous"></script>
+
+    <!-- Icon Stylesheet -->
+    <link rel="shortcut icon" href="images/puzzle.png" type="image/x-icon">
+
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h1 class="brand-name"> <a style="text-decoration: none; color: inherit;" href="index.html">Quiz Quantums</a>
+        </h1>
+        <span style="padding: 200px;"></span>
+
+        <hr class="navbar-hr">
+    </div>
+
+    <div class="main-content">
+        <h1 class="login-heading">Login to save your hard-earned progress !</h1>
+        <div class="secondary-content">
+            <div class="social-media">
+                <button class="social-media-login-btn" id="fb-btn"> <i class="fab fa-facebook"></i>&nbsp;Login with
+                    Facebook</button>
+                <br>
+                <button class="social-media-login-btn" id="google-btn"> <i class="fab fa-google"></i>&nbsp;Login with
+                    Google</button>
+                <br>
+                <button class="social-media-login-btn" id="twitter-btn"> <i class="fab fa-twitter"></i>&nbsp;Login with
+                    Twitter</button>
+            </div>
+            <form class="form" action="index.html" onsubmit="return formValidate()">
+
+                <input id="uname" type="text" placeholder="UserName">
+                <p id="uname-error-box" style="display: none;"></p>
+                <br /><br />
+
+                <input id="passwd" type="password" placeholder="Password">
+                <p id="passwd-error-box" style="display: none;"></p>
+                <br /><br />
+
+                <button class="submit-btn" value="Login">Login</button>
+
+            </form>
+            <hr class="form-hr">
+            <div class="signup">
+                <h1>Not registered yet, Sign up now !</h1>
+                <button class="signup-btn"> <a class= "signup-link" href="signup.html">Sign Up</a></button>
+            </div>
+
+        </div>
+
+    </div>
+    <hr class="footer-hr">
+    <div class="copyright-text-container">
+        <h4 class="copyright-text">QuizQuantums Pvt. Ltd.&nbsp;<i class="far fa-copyright"></i>&nbsp; 2020</h4>
+    </div>
+
+    <!-- Custom JS file -->
+    <script src="scripts/login.js"></script>
+</body>
+
+</html>

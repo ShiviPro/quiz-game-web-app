@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', 'sans-serif';
+    margin: 0;
+    background: linear-gradient(to bottom right, #e6739f 0%, #6a097d 80%);
+    /* created a gradient via the usage of linear-gradient css function, 
+    and set as background-image */
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+.brand-name {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 3rem;
+}
+
+hr {
+    margin: 0 10px;
+    width: 210vh;
+    color: #51adcf;
+}
+
+.main-content {
+    /* padding-right: 0; */
+}
+
+.secondary-content {
+    width: 1000px;
+    position: relative;
+    top: 20px;
+    margin: 0 auto;
+    background-color: rgba(230, 115, 159, 0.7);
+    padding: 3%;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 2%;
+}
+
+.login-heading {
+    text-align: center;
+}
+
+.social-media {
+    display: inline-block;
+    padding-right: 5%;
+    border-right: 2px solid #6a097d;
+}
+
+.social-media-login-btn {
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 10px;
+    margin: 2%;
+    border: 2px solid #333;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.25em;
+    width: 400px;
+    text-align: center;
+}
+
+
+
+#fb-btn {
+
+    background-color: rgb(59, 89, 152);
+    border: 2px solid rgb(59, 89, 152);
+
+}
+
+#fb-btn:focus {
+    border: 1px solid white;
+}
+
+#google-btn {
+
+    background-color: rgb(219, 68, 55);
+    border: 2px solid rgb(219, 68, 55);
+
+}
+
+#google-btn:focus {
+    border: 1px solid white;
+}
+
+#twitter-btn {
+    background-color: rgb(29, 161, 242);
+    border: 2px solid rgb(29, 161, 242);
+}
+
+#twitter-btn:focus {
+    border: 1px solid white;
+}
+
+.secondary-content form {
+    display: inline-block;
+    padding-left: 2%;
+    position: relative;
+    top: 55px;
+}
+
+.secondary-content form input {
+    font-family: inherit;
+    font-size: 1rem;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 3%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.secondary-content form input:focus {
+    border: 2px solid rgba(255, 255, 0, 0.5);
+}
+
+#uname-error-box {
+    margin-left: 20px;
+}
+
+#passwd-error-box {
+    margin-left: 20px;
+}
+
+.submit-btn {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    position: relative;
+    left: 35%;
+    padding: 2%;
+    font-family: inherit;
+    font-size: 2em;
+    font-weight: 800;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: rgba(106, 9, 125, 0.5);
+}
+
+.form-hr {
+    position: relative;
+    top: 70px;
+    width: 90%;
+}
+
+.signup {
+    margin-top: 80px;
+    margin-left: 150px;
+}
+
+.signup-link {
+    color:#000;
+    text-decoration: none;
+}
+
+.signup-btn {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    position: relative;
+    left: 30%;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 2em;
+    font-weight: 800;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+}
+
+.signup-btn:hover {
+    background-color: rgba(106, 9, 125, 0.5);
+}
+
+.footer-hr {
+    position: relative;
+    top: 90px;
+}
+
+.copyright-text-container {
+    margin-top: 7%;
+    font-size: 20px;
+}
+
+.copyright-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
