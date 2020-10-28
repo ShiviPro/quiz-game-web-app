@@ -12,11 +12,10 @@
     <script src="https://kit.fontawesome.com/0e8fd8ca0a.js" crossorigin="anonymous"></script>
 
     <!-- Custom CSS file -->
-    <link rel="stylesheet" href="css/quiz.css">
-    
-    <!-- Custom JS file -->
-    <script src="scripts/quiz-sample.js"></script>
+    <link rel="stylesheet" href="css/quiz-intro.css">
 
+    <!-- Custom JS file -->
+    <script src="scripts/quiz-intro.js"></script>
 </head>
 
 <body>
@@ -43,31 +42,11 @@
     </div>
     <br><br>
     <div class="main-content">
-        <div class="quiz-container" id="quiz-body">
-            <div class="quiz-header">
-                <span id="timer"> <time id="minutes">1</time> : <time id="seconds">00</time></span>
-                <h2 id="question">Question Text</h2>
-                <ul>
-                    <li>
-                        <input type="radio" name="answer" id="a" class="answer">
-                        <label id="a_text" for="a">First Option</label>
-                    </li>
-                    <li>
-                        <input type="radio" name="answer" id="b" class="answer">
-                        <label id="b_text" for="b">Second Option</label>
-                    </li>
-                    <li class="optional">
-                        <input type="radio" name="answer" id="c" class="answer">
-                        <label id="c_text" for="c">Third Option</label>
-                    </li>
-                    <li class="optional">
-                        <input type="radio" name="answer" id="d" class="answer">
-                        <label id="d_text" for="d">Fourth Option</label>
-                    </li>
-                </ul>
-            </div>
 
-            <button id="submit">Submit</button>
+        <div class="main-content">
+            <h1 class="m-cont-text-1">Welcome to the</h1>
+            <h1 class="m-cont-text-2">Quiz</h1>
+            <a id="submit" href="quiz-sample.html">Start Quiz</a>
         </div>
     </div>
     <br><br>

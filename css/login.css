@@ -14,6 +14,11 @@ body {
     min-width: 100vw;
 }
 
+.non-underlined-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .brand-name {
     display: inline-block;
     margin-left: 20px;

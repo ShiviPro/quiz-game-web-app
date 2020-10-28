@@ -13,6 +13,10 @@ body {
     min-height: 100vh;
     min-width: 100vw;
 }
+.non-underlined-link {
+    text-decoration: none;
+    color: inherit;
+}
 
 .brand-name {
     display: inline-block;
