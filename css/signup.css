@@ -13,6 +13,7 @@ body {
     min-height: 100vh;
     min-width: 100vw;
 }
+
 .non-underlined-link {
     text-decoration: none;
     color: inherit;
@@ -22,12 +23,43 @@ body {
     display: inline-block;
     margin-left: 20px;
     font-size: 3rem;
+
+    animation: fadein;
+    animation-duration: 1.5s;
+
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: linear;
 }
+
+.brand-name:hover {
+    transform: scale(1.3) translate(0.75em);
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 hr {
     margin: 0 10px;
     width: 210vh;
     color: #51adcf;
+
+    animation: fadein;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
 }
 
 .main-content {
@@ -43,10 +75,96 @@ hr {
     padding: 3%;
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 2%;
+
+    animation-name: fadein;
+    animation-delay: 3s;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
 }
 
 .login-heading {
     text-align: center;
+}
+
+#login-heading-pt1 {
+
+    animation-name: slidefromleft;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+
+}
+
+@keyframes slidefromleft {
+    0% {
+        position: relative;
+        right: 800px;
+    }
+
+    50% {
+        position: relative;
+        right: 400px;
+    }
+
+    100% {
+        position: relative;
+        right: 0;
+    }
+}
+
+#login-heading-pt2 {
+
+    animation-name: slidefromtop;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+
+}
+
+
+@keyframes slidefromtop {
+    0% {
+        position: relative;
+        top: -400px;
+    }
+
+    50% {
+        position: relative;
+        top: -200px;
+    }
+
+    100% {
+        position: relative;
+        top: 0;
+    }
+}
+
+#login-heading-pt3 {
+
+    animation-name: slidefromright;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes slidefromright {
+    0% {
+        position: relative;
+        left: 800px;
+    }
+
+    50% {
+        position: relative;
+        left: 400px;
+    }
+
+    100% {
+        position: relative;
+        left: 0;
+    }
 }
 
 .social-media {
@@ -66,6 +184,13 @@ hr {
     font-size: 1.25em;
     width: 400px;
     text-align: center;
+
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+
+.social-media-login-btn:hover {
+    transform: scale(1.4) rotateY(360deg);
 }
 
 
@@ -141,10 +266,14 @@ hr {
     background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
     margin-bottom: 8%;
+
+    transition-property: transform;
+    transition-duration: 0.5s;
 }
 
 .submit-btn:hover {
     background-color: rgba(106, 9, 125, 0.5);
+    transform: scale(1.5) rotateX(360deg);
 }
 
 .form-hr {
@@ -162,6 +291,11 @@ hr {
 .copyright-text-container {
     margin-top: 7%;
     font-size: 20px;
+
+    animation: fadein;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
 }
 
 .copyright-text {

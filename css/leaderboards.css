@@ -23,13 +23,53 @@ body {
     display: inline-block;
     margin-left: 20px;
     font-size: 3rem;
+
+    animation: fadein;
+    animation-duration: 1.5s;
+
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: linear;
 }
+
+.brand-name:hover {
+    transform: scale(1.3) translate(0.75em);
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 .navbar-item {
     display: inline-block;
     margin-top: 20px;
     margin-left: 50px;
     padding: 10px;
+
+    animation: fadein;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+}
+
+.navbar-img {
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+
+.navbar-item:hover .navbar-img {
+    transform: rotate(360deg);
 }
 
 .navbar-link {
@@ -43,6 +83,11 @@ hr {
     margin: 0 10px;
     width: 210vh;
     color: #51adcf;
+
+    animation: fadein;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
 }
 
 .main-content {
@@ -50,10 +95,30 @@ hr {
     width: 75%;
 }
 
+.main-content h2 {
+    animation-name: fadein;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+}
+
 table {
     width: 120%;
     padding: 40px;
     margin: 0 auto;
+
+    animation: fadein;
+    animation-delay: 3s;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: backwards;
+
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+table:hover {
+    transform: rotateY(360deg);
 }
 
 table tr th, table tr td {
@@ -80,12 +145,24 @@ table, table tr, table tr th, table tr td {
 }
 
 .user-entry a, .non-user-entry {
-    color: #333;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.user-entry a:hover,
+.non-user-entry:hover {
+    color: #000;
+    opacity: 0.5;
 }
 
 .copyright-text-container {
     margin-top: 30px;
     font-size: 20px;
+
+    animation: fadein;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
 }
 
 

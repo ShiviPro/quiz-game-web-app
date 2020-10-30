@@ -786,14 +786,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 c: "Great War",
                 d: "Revolution of 1917",
                 correct: "c"
-            },
-            {
-                question: "Where was the first Nazi concentration camp in Germany established?",
-                a: "Auschwitz",
-                b: "Dachau",
-                c: "Bergen-Belsen",
-                d: "Buchenwald",
-                correct: "b"
             }
         ],
 
@@ -875,9 +867,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const minute_el = document.getElementById('minutes');
     const second_el = document.getElementById('seconds');
 
+    const q_res_box = document.getElementById('c-or-inc');
+
     var selectedQuiz = localStorage.getItem('quiz-name');
 
     // console.log(quizData[selectedQuiz]);
+
+    const quiz_body = document.getElementById('quiz-body');
 
     var default_t_mins = 1;
     var default_t_secs = 0;
@@ -887,22 +883,29 @@ document.addEventListener('DOMContentLoaded', function () {
     var score = 0;
     var max_score = quizData[selectedQuiz].length - 1;
     // although the quizData is nested JSON object , it can be accessed via subscripting, even though it's not an array of objects.
-    
+
     var ID;
 
     loadQuiz();
 
     function loadQuiz() {
         resetEl();
-    //   if (quizData[selectedQuiz].category === "True or False: Famous Misconceptions Quiz") {
-    //       document.querySelectorAll('.optional').addClass('invisible');
-    //   }
+        unmark();
         const currentQuizData = quizData[selectedQuiz][currentQuiz];
         questionEl.innerText = currentQuizData.question;
         a_text.innerText = currentQuizData.a;
         b_text.innerText = currentQuizData.b;
         c_text.innerText = currentQuizData.c;
         d_text.innerText = currentQuizData.d;
+
+        if (currentQuizData.c === '') {
+            document.getElementById('c').style.display = "none";
+        }
+
+        if (currentQuizData.d === '') {
+            document.getElementById('d').style.display = "none";
+        }
+
         ID = window.setInterval(updateTime, '1000');
     }
 
@@ -938,36 +941,104 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-
     submitBtn.addEventListener('click', onSubmitClick);
 
     function onSubmitClick() {
-
         window.clearInterval(ID);
         const answer = isSelected();
 
         if (answer) {
             if (answer === quizData[selectedQuiz][currentQuiz].correct) {
                 score += 1;
+                markCorrect();
+
+            } else {
+                markIncorrect();
             }
         }
+
         currentQuiz++;
 
         if (currentQuiz < quizData[selectedQuiz].length) {
+            resetAnimations();
             loadQuiz();
         } else {
             const body = document.querySelector('#quiz-body');
 
             var res1 = 'Congratulations, you have completed the test.';
             var res2 = 'You have scored a total of ' + score + '/' + max_score + 'points.';
-
+            resetAnimations();
             body.innerHTML = '<h2 style="padding: 20px;">' + res1 + '</h2>' + '<h2 style="padding: 20px;">' + res2 + '</h2>';
         }
     }
 
+    function markCorrect() {
+        answerEls.forEach(answerElem => {
+
+            if (answerElem.id === quizData[selectedQuiz][currentQuiz].correct) {
+
+                q_res_box.classList.remove('ans-slidefromrightNdfadeaway');
+
+                void q_res_box.offsetWidth;
+
+                q_res_box.classList.add('ans-slidefromrightNdfadeaway');
+
+                q_res_box.innerText = "Correct";
+
+                q_res_box.classList.remove('incorrect-style');
+
+                q_res_box.classList.add('correct-style');
+
+            }
+
+        });
+    }
+
+    function markIncorrect() {
+        answerEls.forEach(answerElem => {
+
+            if (answerElem.checked) {
+                if ((answerElem.id != quizData[selectedQuiz][currentQuiz].correct)) {
+
+                    q_res_box.classList.remove('ans-slidefromrightNdfadeaway');
+
+                    void q_res_box.offsetWidth;
+
+                    q_res_box.classList.add('ans-slidefromrightNdfadeaway');
+
+                    q_res_box.innerText = "Incorrect";
+
+                    q_res_box.classList.remove('correct-style');
+
+                    q_res_box.classList.add('incorrect-style');
+
+                }
+            }
+
+        });
+    }
+
+
+
+
+    function unmark() {
+        answerEls.forEach(answerElem => {
+
+            answerElem.classList.remove('correctAnswerAnimator');
+        });
+    }
+
+
+    function resetAnimations() {
+
+        quiz_body.classList.remove('run-fadein');
+        void quiz_body.offsetWidth;
+
+        quiz_body.classList.add('run-fadein');
+
+    }
 
     function isSelected() {
-
 
         var answer = undefined;
 

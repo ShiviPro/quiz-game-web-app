@@ -23,6 +23,30 @@ body {
     display: inline-block;
     margin-left: 20px;
     font-size: 3rem;
+    animation: fadein;
+    animation-duration: 1.5s;
+
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: linear;
+}
+
+.brand-name:hover {
+    transform: scale(1.3) translate(0.75em);
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .navbar-item {
@@ -30,6 +54,20 @@ body {
     margin-top: 20px;
     margin-left: 100px;
     padding: 10px;
+
+    animation: fadein;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+}
+
+.navbar-img {
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+
+.navbar-item:hover .navbar-img {
+    transform: rotate(360deg);
 }
 
 .navbar-link {
@@ -43,6 +81,11 @@ hr {
     margin: 0 10px;
     width: 210vh;
     color: #51adcf;
+
+    animation: fadein;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
 }
 
 .main-content {
@@ -53,6 +96,13 @@ hr {
 .main-content table {
     margin: auto;
     width: 1200px;
+
+    transition-duration: 100ms;
+}
+
+.main-content table:hover {
+    transform: scale(1.5) rotate(360deg);
+    background: linear-gradient(to bottom right, #e6739f 0%, #6a097d 80%);
 }
 
 .main-content table, .main-content table tr, .main-content table tr th, .main-content table tr td {
@@ -83,6 +133,11 @@ hr {
 .copyright-text-container {
     margin-top: 3.5%;
     font-size: 20px;
+
+    animation: fadein;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
 }
 
 .copyright-text {

@@ -20,14 +20,16 @@
 <body>
 
     <div class="navbar">
-        <h1 class="brand-name"> <a style="text-decoration: none; color: inherit;" href="index.html">Quiz Quantums</a>
+        <h1 class="brand-name"> <a class="non-underlined-link" href="index.html">Quiz Quantums</a>
         </h1>
 
         <hr class="navbar-hr">
     </div>
 
     <div class="main-content">
-        <h1 class="login-heading">Sign Up today to become a member of our family !</h1>
+        <h1 class="login-heading"><span id="login-heading-pt1">Sign Up today</span> <span id="login-heading-pt2">to
+                become a member</span> <span id="login-heading-pt3">of our family
+                !</span></h1>
         <div class="secondary-content">
             <div class="social-media">
                 <button class="social-media-login-btn" id="fb-btn"> <i class="fab fa-facebook"></i>&nbsp;Signup with
@@ -40,7 +42,7 @@
                     Twitter</button>
             </div>
             <hr class="form-hr">
-            <form class="form" action="index.html" onsubmit="return formValidate()">
+            <form class="form" action="login.html" onsubmit="return formValidate()">
 
                 <input id="fname" type="text" placeholder="First Name">
                 

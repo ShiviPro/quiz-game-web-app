@@ -23,12 +23,42 @@ body {
     display: inline-block;
     margin-left: 20px;
     font-size: 3rem;
+
+    animation: fadein;
+    animation-duration: 1.5s;
+
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: linear;
+}
+
+.brand-name:hover {
+    transform: scale(1.3) translate(0.75em);
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 hr {
     margin: 0 10px;
     width: 210vh;
     color: #51adcf;
+
+    animation: fadein;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
 }
 
 .main-content {
@@ -44,11 +74,29 @@ hr {
     padding: 3%;
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 2%;
+
+    animation: fadein;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-duration: 1s;
 }
+
 
 .login-heading {
     text-align: center;
+    animation: slidefromtop;
+    animation-delay: 2s;
+    animation-fill-mode: backwards;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
 }
+
+@keyframes slidefromtop {
+    0%{position: relative; top: -300px;}
+    50%{ position: relative; top: -150px;}
+    100%{position: relative; top: 0;}
+} 
 
 .social-media {
     display: inline-block;
@@ -68,6 +116,13 @@ hr {
     font-size: 1.25em;
     width: 400px;
     text-align: center;
+
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+
+.social-media-login-btn:hover {
+    transform: scale(1.2) translate(-0.45em);
 }
 
 
@@ -142,10 +197,15 @@ hr {
     font-weight: 800;
     background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
+
+    transition-duration: 0.5s;
+    transition-property: transform;
 }
 
 .submit-btn:hover {
     background-color: rgba(106, 9, 125, 0.5);
+
+    transform: scale(1.3);
 }
 
 .form-hr {
@@ -157,10 +217,13 @@ hr {
 .signup {
     margin-top: 80px;
     margin-left: 150px;
+
+    
 }
 
+
 .signup-link {
-    color:#000;
+    color: #000;
     text-decoration: none;
 }
 
@@ -175,10 +238,15 @@ hr {
     font-weight: 800;
     background-color: rgba(255, 255, 255, 0.3);
     cursor: pointer;
+
+    transition-duration: 0.5s;
+    transition-property: transform;
 }
 
 .signup-btn:hover {
     background-color: rgba(106, 9, 125, 0.5);
+    transform: rotate(360deg);
+
 }
 
 .footer-hr {
@@ -189,6 +257,11 @@ hr {
 .copyright-text-container {
     margin-top: 7%;
     font-size: 20px;
+
+    animation: fadein;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
 }
 
 .copyright-text {

@@ -39,6 +39,28 @@ body {
      interfering with the current element's css*/
 }
 
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.run-fadein {
+    position: relative;
+    animation-name: fadein;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+}
+
 .quiz-header {
     padding: 4rem;
 }
@@ -95,12 +117,18 @@ button:focus {
     background-color: #7f8c8d;
 }
 
-
-
 .brand-name {
     display: inline-block;
     margin-left: 20px;
     font-size: 3rem;
+
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: linear;
+}
+
+.brand-name:hover {
+    transform: scale(1.3) translate(0.75em);
 }
 
 .navbar-item {
@@ -108,6 +136,15 @@ button:focus {
     margin-top: 20px;
     margin-left: 50px;
     padding: 10px;
+}
+
+.navbar-img {
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+
+.navbar-item:hover .navbar-img {
+    transform: rotate(360deg);
 }
 
 .navbar-link {
@@ -167,4 +204,53 @@ hr {
 
 .visible {
     display: block;
+}
+
+#c-or-inc {
+    padding: 25px;
+    font-size: 2em;
+    color: #fff;
+    font-weight: 800;
+    position: absolute;
+    right: 50px;
+    border-radius: 10px;
+}
+
+.ans-slidefromrightNdfadeaway {
+    animation-name: slidefromrightNdfadeaway;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+.correct-style {
+    background-color: #28df99;
+}
+
+.incorrect-style {
+    background-color: #ff4b5c;
+}
+
+
+@keyframes slidefromrightNdfadeaway {
+    0% {
+        position: absolute;
+        right: -150px;
+        opacity: 1;
+    }
+
+    10% {
+        position: absolute;
+        right: 50px;
+        opacity: 1;
+    }
+
+    65% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
 }

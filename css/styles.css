@@ -14,10 +14,36 @@ body {
     min-width: 100vw;
 }
 
+
 .brand-name {
     display: inline-block;
     margin-left: 20px;
     font-size: 3rem;
+
+    animation: fadein;
+    animation-duration: 1.5s;
+
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: linear;
+}
+
+.brand-name:hover {
+    transform: scale(1.3) translate(0.75em);
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .navbar-item {
@@ -25,6 +51,20 @@ body {
     margin-top: 20px;
     margin-left: 50px;
     padding: 10px;
+
+    animation: fadein;
+    animation-delay: 0.5s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+}
+
+.navbar-img {
+    transition-duration: 0.5s;
+    transition-property: transform;
+}
+
+.navbar-item:hover .navbar-img {
+    transform: rotate(360deg);
 }
 
 .navbar-link {
@@ -38,6 +78,11 @@ hr {
     margin: 0 10px;
     width: 210vh;
     color: #51adcf;
+
+    animation: fadein;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
 }
 
 .main-content {
@@ -46,10 +91,35 @@ hr {
     padding: 2% 0;
 }
 
+@keyframes slideinfromleft {
+
+    0% {
+        position: relative;
+        right: 50%;
+    }
+
+    50% {
+        position: relative;
+        right: 0%;
+    }
+
+    100% {
+        position: relative;
+        left: 0;
+    }
+
+}
+
 .m-cont-text-1 {
     display: flex;
     justify-content: left;
     font-size: 2.5em;
+
+    animation: slideinfromleft;
+    animation-delay: 3s;
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
 }
 
 .m-cont-text-2 {
@@ -58,24 +128,120 @@ hr {
     font-size: 2em;
     position: relative;
     right: 85px;
+
+    animation: fadein;
+    animation-delay: 5s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in;
+}
+
+@keyframes slideinfromright {
+
+    0% {
+        position: relative;
+        left: 1200px;
+    }
+
+    50% {
+        position: relative;
+        left: 600px;
+    }
+
+    100% {
+        position: relative;
+        left: 0;
+    }
+
 }
 
 .m-cont-text-3 {
     display: flex;
     justify-content: right;
     font-size: 2.5em;
+
+    animation: slideinfromright;
+    animation-delay: 8s;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
 }
+
+@keyframes slideinfromtop {
+    0% {
+        position: relative;
+        top: -1000px;
+    }
+
+    50% {
+        position: relative;
+        top: -500px;
+    }
+
+    100% {
+        position: relative;
+        top: 0;
+    }
+}
+
+@keyframes slidetopdown {
+    20% {
+        position: relative;
+        bottom: 0;
+    }
+
+    40% {
+        position: relative;
+        bottom: 50px;
+    }
+
+    60% {
+        position: relative;
+        bottom: 0;
+    }
+
+    80% {
+        position: relative;
+        bottom: 50px;
+    }
+
+    100% {
+        position: relative;
+        bottom: 0;
+    }
+}
+
 
 .m-cont-text-4 {
     display: flex;
     justify-content: center;
     font-size: 2.5em;
     margin-top: 150px;
+
+    animation: slideinfromtop;
+    animation-delay: 10s;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-timing-function: linear;
+}
+
+.m-cont-text-4 i {
+    animation: slidetopdown;
+    animation-delay: 11s;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-out;
 }
 
 .copyright-text-container {
     margin-top: 3.5%;
     font-size: 20px;
+
+    animation: fadein;
+    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
 }
 
 .copyright-text {
