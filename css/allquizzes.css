@@ -52,7 +52,6 @@ body {
 .navbar-item {
     display: inline-block;
     margin-top: 20px;
-    margin-left: 100px;
     padding: 10px;
 
     animation: fadein;
@@ -75,6 +74,26 @@ body {
     font-size: 2rem;
     color: #000;
     font-weight: 800;
+}
+
+#search-bar {
+    display: none;
+    background-color: #51adcf;
+    padding: 1em;
+    margin-right: 10px;
+    border: 2px solid #6a097d;
+    border-radius: 10px;
+    font-family: inherit;
+    font-weight: 800;
+    font-size: 1.3em;
+    
+    position: relative;
+    bottom: 20px;
+
+}
+
+#search-bar:focus {
+    border:5px solid rgba(106,9,125,0.7);
 }
 
 hr {

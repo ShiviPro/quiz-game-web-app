@@ -280,7 +280,16 @@ hr {
     position: relative;
     top: 30px;
     left: 150px;
-    width: 60%;
+    width: 30%;
+}
+
+#alternate-option-txt {
+    display: inline;
+    position: relative;
+    left: 50%;
+    top: 10px;
+    font-size: 1.5em;
+    font-weight: 800;
 }
 
 .footer-hr {

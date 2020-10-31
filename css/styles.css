@@ -130,8 +130,8 @@ hr {
     right: 85px;
 
     animation: fadein;
-    animation-delay: 5s;
-    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-duration: 1s;
     animation-fill-mode: backwards;
     animation-timing-function: ease-in;
 }
@@ -161,7 +161,7 @@ hr {
     font-size: 2.5em;
 
     animation: slideinfromright;
-    animation-delay: 8s;
+    animation-delay: 6s;
     animation-duration: 1s;
     animation-fill-mode: backwards;
     animation-timing-function: linear;
@@ -219,7 +219,7 @@ hr {
     margin-top: 150px;
 
     animation: slideinfromtop;
-    animation-delay: 10s;
+    animation-delay: 8s;
     animation-duration: 1s;
     animation-fill-mode: backwards;
     animation-timing-function: linear;
@@ -227,7 +227,7 @@ hr {
 
 .m-cont-text-4 i {
     animation: slidetopdown;
-    animation-delay: 11s;
+    animation-delay: 10s;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
     animation-fill-mode: backwards;
