@@ -1,8 +1,8 @@
 # quiz-game-web-app
-A fully functional quiz game web app.
+A fully functional quiz game web app made with HTML, CSS, Vanilla JS, JQuery, and AngularJS.
 
-NOTE - Currently under development. No longer a sample, all the quizzes are added with scoring functionality. 
+NOTE - Has passed the final production phase. All the usual functions are implemented correctly, along with appropriate animations. 
 
-Major UX Update - Animations added to the project, so now the website is fully dynamic with respect to fetching quizzes and loading approprite effects.
+Quiz Search functionality has been finally added.
 
-Also, note - Quiz Search functionality coming soon !
+Also, note - Live Leaderboard functionality, will come eventually, as a part of additional updates
