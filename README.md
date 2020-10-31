@@ -5,4 +5,10 @@ NOTE - Has passed the final production phase. All the usual functions are implem
 
 Quiz Search functionality has been finally added.
 
-Also, note - Live Leaderboard functionality, will come eventually, as a part of additional updates
+Also, note - 
+
+* On Github pages host i.e. https://shivipro.github.io/quiz-game-web-app/ , the images are not displayed due to github image constraints, but on localhosting, the project works perfectly fine with accurate image loading. 
+
+* Major Readme update coming soon !
+
+* Live Leaderboard functionality, will come eventually, as a part of additional updates
