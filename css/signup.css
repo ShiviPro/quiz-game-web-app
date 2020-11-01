@@ -62,10 +62,6 @@ hr {
     animation-fill-mode: backwards;
 }
 
-.main-content {
-    /* padding-right: 0; */
-}
-
 .secondary-content {
     width: 1000px;
     position: relative;
@@ -82,11 +78,11 @@ hr {
     animation-fill-mode: backwards;
 }
 
-.login-heading {
+.signup-heading {
     text-align: center;
 }
 
-#login-heading-pt1 {
+#signup-heading-pt1 {
 
     animation-name: slidefromleft;
     animation-duration: 1s;
@@ -113,7 +109,7 @@ hr {
     }
 }
 
-#login-heading-pt2 {
+#signup-heading-pt2 {
 
     animation-name: slidefromtop;
     animation-duration: 1s;
@@ -141,7 +137,7 @@ hr {
     }
 }
 
-#login-heading-pt3 {
+#signup-heading-pt3 {
 
     animation-name: slidefromright;
     animation-duration: 1s;

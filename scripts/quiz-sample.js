@@ -851,7 +851,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         ]
 
-
     };
 
     const answerEls = document.querySelectorAll('.answer');
@@ -870,8 +869,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const q_res_box = document.getElementById('c-or-inc');
 
     var selectedQuiz = localStorage.getItem('quiz-name');
-
-    // console.log(quizData[selectedQuiz]);
 
     const quiz_body = document.getElementById('quiz-body');
 
@@ -1018,16 +1015,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-
-
-
     function unmark() {
         answerEls.forEach(answerElem => {
 
             answerElem.classList.remove('correctAnswerAnimator');
         });
     }
-
 
     function resetAnimations() {
 
